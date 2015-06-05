@@ -94,3 +94,25 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_tn8
 TARGET_LIBINIT_DEFINES_FILE := device/nvidia/shieldtablet/init/init_tn8.cpp
 
+# TWRP
+RECOVERY_VARIANT := twrp
+TW_THEME := portrait_hdpi
+TW_THEME_LANDSCAPE := landscape_hdpi
+BOARD_HAS_FLIPPED_SCREEN := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_BRIGHTNESS_PATH := /sys/class/backlight/pwm-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+
+# MultiROM
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := device/nvidia/shieldtablet/multirom/mr_init_devices.c
+MR_DPI := xhdpi
+MR_DPI_FONT := 323
+MR_FSTAB := device/nvidia/shieldtablet/multirom/twrp.fstab
+MR_KEXEC_MEM_MIN := 0x85000000
+MR_KEXEC_DTB := true
+MR_DEVICE_HOOKS := device/nvidia/shieldtablet/multirom/mr_hooks.c
+MR_DEVICE_HOOKS_VER := 3
+MR_DEVICE_VARIANTS := shieldtablet
