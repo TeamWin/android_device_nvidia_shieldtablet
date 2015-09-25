@@ -33,7 +33,7 @@ TARGET_NO_RADIOIMAGE := true
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/nvidia/shieldtablet
-TARGET_KERNEL_CONFIG := cyanogenmod_shieldtablet_defconfig
+TARGET_KERNEL_CONFIG := omni_shieldtablet_defconfig
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USERDATAIMAGE_PARTITION_SIZE  := 12799754240
@@ -134,3 +134,11 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_tn8
 TARGET_LIBINIT_DEFINES_FILE := device/nvidia/shieldtablet/init/init_tn8.c
 
+# TWRP
+TW_THEME := landscape_hdpi
+BOARD_HAS_FLIPPED_SCREEN := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_BRIGHTNESS_PATH := /sys/class/backlight/pwm-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
