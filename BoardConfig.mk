@@ -135,7 +135,7 @@ TARGET_INIT_VENDOR_LIB := libinit_tn8
 TARGET_LIBINIT_DEFINES_FILE := device/nvidia/shieldtablet/init/init_tn8.c
 
 # TWRP
-TW_THEME := landscape_hdpi
+TW_THEME := portrait_hdpi
 BOARD_HAS_FLIPPED_SCREEN := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_HAS_NO_REAL_SDCARD := true
