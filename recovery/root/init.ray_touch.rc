@@ -15,6 +15,3 @@ on boot
 
     # Touch
     mount ext4 /dev/block/platform/sdhci-tegra.3/by-name/FCT /mnt/factory ro
-
-#Raydium touch setting
-service rm_ts_runner    /system/bin/rm_ts_runner.sh
