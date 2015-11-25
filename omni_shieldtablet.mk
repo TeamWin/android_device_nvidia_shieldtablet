@@ -16,13 +16,13 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/zombi/config/common_tablet.mk)
+$(call inherit-product, vendor/omni/config/common_tablet.mk)
 
 # Inherit from wx_na_wf device
 $(call inherit-product, device/nvidia/shieldtablet/device.mk)
 
 # Setup device specific product configuration.
-PRODUCT_NAME := zombi_shieldtablet
+PRODUCT_NAME := omni_shieldtablet
 PRODUCT_DEVICE := shieldtablet
 PRODUCT_BRAND := nvidia
 PRODUCT_MANUFACTURER := nvidia

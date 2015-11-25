@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/zombi_shieldtablet.mk
+    $(LOCAL_DIR)/omni_shieldtablet.mk
