@@ -5,6 +5,6 @@
 /misc           emmc            /dev/block/platform/sdhci-tegra.3/by-name/MSC
 /staging        emmc            /dev/block/platform/sdhci-tegra.3/by-name/USP
 /metadata       emmc            /dev/block/platform/sdhci-tegra.3/by-name/MDA
-/data           ext4            /dev/block/platform/sdhci-tegra.3/by-name/UDA
+/data           ext4            /dev/block/platform/sdhci-tegra.3/by-name/UDA                    flags=encryptable=/dev/block/platform/sdhci-tegra.3/by-name/MDA
 /external_sd    vfat            /dev/block/platform/sdhci-tegra.2/by-num/p1			 flags=display="Micro SDcard";storage;wipeingui;removable
 /usb-otg        vfat            /dev/block/sda1	  /dev/block/sda	                         flags=removable;storage;display=USB-OTG
