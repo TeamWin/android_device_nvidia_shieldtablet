@@ -123,7 +123,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/nvcamera.conf:system/etc/nvcamera.conf \
     $(LOCAL_PATH)/camera/model_frontal.xml:system/etc/model_frontal.xml
-#PRODUCT_PACKAGES += libcam
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -163,12 +162,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.xml:system/etc/permissions/android.software.sip.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
-# Power
-PRODUCT_PACKAGES += power.tegra
-
 # Wireless Controller
-#$(call inherit-product-if-exists, vendor/nvidia/shield_common/blake-blobs.mk)
+$(call inherit-product-if-exists, vendor/nvidia/shield_common/blake-blobs.mk)
 
 # Console Mode
-#$(call inherit-product-if-exists, vendor/nvidia/shield_common/consolemode-blobs.mk)
+$(call inherit-product-if-exists, vendor/nvidia/shield_common/consolemode-blobs.mk)
 
