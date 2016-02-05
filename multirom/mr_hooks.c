@@ -53,7 +53,7 @@ static void load_firmware() {
 	mkdir("/sysint", 0755);
 	wait_for_file("/dev/block/platform/sdhci-tegra.3/by-name/APP", 10);
 	mount("/dev/block/platform/sdhci-tegra.3/by-name/APP", "/sysint", "ext4", MS_RDONLY, NULL);
-	symlink("/sysint/etc", "/etc");
+	//symlink("/sysint/etc", "/etc");
 
 	// Open the device for firmware loading
 	wait_for_file("/sys/class/firmware/gk20a!gpmu_ucode.bin/loading", 10);
@@ -61,8 +61,8 @@ static void load_firmware() {
 	write(fd_loading, "1", 1);
 
 	// Copy the firmware into the device
-	wait_for_file("/sysint/etc/firmware/gk20a/gpmu_ucode.bin", 10);
-	fd_firm = fopen("/sysint/etc/firmware/gk20a/gpmu_ucode.bin", "rb");
+	wait_for_file("/sysint/vendor/firmware/gk20a/gpmu_ucode.bin", 10);
+	fd_firm = fopen("/sysint/vendor/firmware/gk20a/gpmu_ucode.bin", "rb");
 	fd_data = fopen("/sys/class/firmware/gk20a!gpmu_ucode.bin/data", "wb");
 	while((c=getc(fd_firm))!=EOF)
 		fprintf(fd_data,"%c",c);
@@ -76,7 +76,7 @@ static void load_firmware() {
 	// Here, gk20a loads another firmware blob from /etc/firmware
 	// Arbitrarily wait a second for it to finish loading and unmount everything
 	sleep(1);
-	unlink("/etc");
+	//unlink("/etc");
 	umount("/sysint");
 	unlink("/sysint");
 	ERROR("Finished gk20a firmware load.\n");
