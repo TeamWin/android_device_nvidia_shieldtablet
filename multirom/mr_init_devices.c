@@ -30,7 +30,7 @@ const char *mr_init_devices[] = {
 	"/sys/devices/virtual/misc/uinput",
 	"/sys/bus/spi",
 	"/sys/bus/spi/drivers/rm_ts_spidev",
-	"/sys/devices/platform/spi-tegra114.0*",
+	"/sys/devices/platform/7000d400.spi*",
 	"/sys/bus/platform/drivers/spi-tegra114",
 	"/sys/devices/virtual/misc/touch",
 	"/sys/bus/hid",
