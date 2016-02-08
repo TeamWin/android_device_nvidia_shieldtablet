@@ -95,7 +95,6 @@ TARGET_INIT_VENDOR_LIB := libinit_tn8
 TARGET_LIBINIT_DEFINES_FILE := device/nvidia/shieldtablet/init/init_tn8.cpp
 
 # TWRP
-RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 TW_THEME_LANDSCAPE := landscape_hdpi
 BOARD_HAS_FLIPPED_SCREEN := true
@@ -107,6 +106,7 @@ TW_MAX_BRIGHTNESS := 255
 TW_INCLUDE_CRYPTO := true
 
 # MultiROM
+TARGET_RECOVERY_IS_MULTIROM := true
 MR_INPUT_TYPE := type_b
 MR_INIT_DEVICES := device/nvidia/shieldtablet/multirom/mr_init_devices.c
 MR_DPI := xhdpi
