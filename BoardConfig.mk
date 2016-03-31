@@ -142,7 +142,6 @@ TARGET_LIBINIT_DEFINES_FILE := device/nvidia/shieldtablet/init/init_tn8.c
 # TWRP
 TW_THEME := portrait_hdpi
 BOARD_HAS_FLIPPED_SCREEN := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_HAS_NO_REAL_SDCARD := true
 TW_INCLUDE_CRYPTO := true
 RECOVERY_SDCARD_ON_DATA := true
