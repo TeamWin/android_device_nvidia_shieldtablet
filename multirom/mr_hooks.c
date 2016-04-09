@@ -155,3 +155,36 @@ void tramp_hook_before_device_init() {
 	}
 }
 #endif
+
+#if MR_DEVICE_HOOKS >= 4
+int mrom_hook_allow_incomplete_fstab(void)
+{
+    return 0;
+}
+#endif
+
+#if MR_DEVICE_HOOKS >= 5
+
+void mrom_hook_fixup_bootimg_cmdline(char *bootimg_cmdline, size_t bootimg_cmdline_cap)
+{
+}
+
+int mrom_hook_has_kexec(void)
+{
+    static const char *checkfile1 = "/sys/firmware/fdt";
+    static const char *checkfile2 = "/proc/device-tree";
+
+    // check for fdt blob
+    if(access(checkfile1, R_OK) >= 0)
+        return 1;
+
+    // check for /proc/device-tree
+    if(access(checkfile2, R_OK) >= 0) {
+        ERROR("%s was not found, but %s was. Assuming kexec hardboot is applied.\n", checkfile1, checkfile2);
+        return 1;
+    }
+
+    ERROR("Neither %s or %s were found!\n", checkfile1, checkfile2);
+    return 0;
+}
+#endif
