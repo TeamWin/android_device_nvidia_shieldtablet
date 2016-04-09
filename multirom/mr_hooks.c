@@ -129,21 +129,22 @@ void tramp_hook_before_device_init() {
 	  fclose(fd_cmdline);
 	  if (line)
 	    free(line);
-	  if (second_boot)
-	    return;
 	}
 
 	signal(SIGCHLD, SIG_IGN);
 
-	// Spawn touch thread
-	if (fork() == 0) {
-		ts_thread();
-		_exit(0);
-	}
-
 	// Load firmware thread
 	if (fork() == 0) {
 		load_firmware();
+		_exit(0);
+	}
+
+	if (second_boot)
+		return;
+
+	// Spawn touch thread
+	if (fork() == 0) {
+		ts_thread();
 		_exit(0);
 	}
 
