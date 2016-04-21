@@ -104,6 +104,7 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_BRIGHTNESS_PATH := /sys/class/backlight/pwm-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_INCLUDE_CRYPTO := true
+BOARD_USES_DOUBLEFLIP_FB := true
 
 # MultiROM
 TARGET_RECOVERY_IS_MULTIROM := true
