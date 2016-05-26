@@ -125,8 +125,8 @@ $(call inherit-product-if-exists, vendor/nvidia/shield_common/nvcamera-blobs.mk)
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/multirom/twrp.fstab:recovery/root/etc/twrp.fstab \
-    $(LOCAL_PATH)/multirom/rm-runner.sh:recovery/root/system/bin/rm-runner.sh \
+    $(LOCAL_PATH)/twrp/twrp.fstab:recovery/root/etc/twrp.fstab \
+    $(LOCAL_PATH)/twrp/rm-runner.sh:recovery/root/system/bin/rm-runner.sh \
     $(OUT)/obj/EXECUTABLES/rm-wrapper_intermediates/LINKED/rm-wrapper:recovery/root/system/bin/rm-wrapper \
     $(OUT)/system/bin/linker:recovery/root/system/bin/linker \
     $(OUT)/system/lib/libc.so:recovery/root/system/lib/libc.so \
@@ -135,26 +135,26 @@ PRODUCT_COPY_FILES += \
     $(OUT)/system/lib/libm.so:recovery/root/system/lib/libm.so \
     $(OUT)/system/lib/libc++.so:recovery/root/system/lib/libc++.so \
     $(OUT)/system/lib/libstdc++.so:recovery/root/system/lib/libstdc++.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/librm31080.so:recovery/root/system/lib/librm31080.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/hw/ts.default.so:recovery/root/system/lib/hw/ts.default.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_02_00_20.so:recovery/root/system/lib/para_10_02_00_20.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_02_00_a0.so:recovery/root/system/lib/para_10_02_00_a0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_02_00_b0.so:recovery/root/system/lib/para_10_02_00_b0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_03_00_20.so:recovery/root/system/lib/para_10_03_00_20.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_03_00_a0.so:recovery/root/system/lib/para_10_03_00_a0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_03_00_a0.so:recovery/root/system/lib/para_10_03_00_b0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_04_00_b0.so:recovery/root/system/lib/para_10_04_00_b0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_04_00_c0.so:recovery/root/system/lib/para_10_04_00_c0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_05_00_c0.so:recovery/root/system/lib/para_10_05_00_c0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_06_00_b0.so:recovery/root/system/lib/para_10_06_00_b0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_07_00_b0.so:recovery/root/system/lib/para_10_07_00_b0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_08_00_20.so:recovery/root/system/lib/para_10_08_00_20.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_08_00_a0.so:recovery/root/system/lib/para_10_08_00_a0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_08_00_b0.so:recovery/root/system/lib/para_10_08_00_b0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_09_00_c0.so:recovery/root/system/lib/para_10_09_00_c0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_09_01_c0.so:recovery/root/system/lib/para_10_09_01_c0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_09_02_c0.so:recovery/root/system/lib/para_10_09_02_c0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_0a_00_b0.so:recovery/root/system/lib/para_10_0a_00_b0.so \
-    vendor/nvidia/shieldtablet/proprietary/vendor/lib/para_10_0b_00_a0.so:recovery/root/system/lib/para_10_0b_00_a0.so
+    $(LOCAL_PATH)/twrp/librm31080.so:recovery/root/system/lib/librm31080.so \
+    $(LOCAL_PATH)/twrp/ts.default.so:recovery/root/system/lib/hw/ts.default.so \
+    $(LOCAL_PATH)/twrp/para_10_02_00_20.so:recovery/root/system/lib/para_10_02_00_20.so \
+    $(LOCAL_PATH)/twrp/para_10_02_00_a0.so:recovery/root/system/lib/para_10_02_00_a0.so \
+    $(LOCAL_PATH)/twrp/para_10_02_00_b0.so:recovery/root/system/lib/para_10_02_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_03_00_20.so:recovery/root/system/lib/para_10_03_00_20.so \
+    $(LOCAL_PATH)/twrp/para_10_03_00_a0.so:recovery/root/system/lib/para_10_03_00_a0.so \
+    $(LOCAL_PATH)/twrp/para_10_03_00_a0.so:recovery/root/system/lib/para_10_03_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_04_00_b0.so:recovery/root/system/lib/para_10_04_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_04_00_c0.so:recovery/root/system/lib/para_10_04_00_c0.so \
+    $(LOCAL_PATH)/twrp/para_10_05_00_c0.so:recovery/root/system/lib/para_10_05_00_c0.so \
+    $(LOCAL_PATH)/twrp/para_10_06_00_b0.so:recovery/root/system/lib/para_10_06_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_07_00_b0.so:recovery/root/system/lib/para_10_07_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_08_00_20.so:recovery/root/system/lib/para_10_08_00_20.so \
+    $(LOCAL_PATH)/twrp/para_10_08_00_a0.so:recovery/root/system/lib/para_10_08_00_a0.so \
+    $(LOCAL_PATH)/twrp/para_10_08_00_b0.so:recovery/root/system/lib/para_10_08_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_09_00_c0.so:recovery/root/system/lib/para_10_09_00_c0.so \
+    $(LOCAL_PATH)/twrp/para_10_09_01_c0.so:recovery/root/system/lib/para_10_09_01_c0.so \
+    $(LOCAL_PATH)/twrp/para_10_09_02_c0.so:recovery/root/system/lib/para_10_09_02_c0.so \
+    $(LOCAL_PATH)/twrp/para_10_0a_00_b0.so:recovery/root/system/lib/para_10_0a_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_0b_00_a0.so:recovery/root/system/lib/para_10_0b_00_a0.so
 
 $(call inherit-product, device/nvidia/shield-common/shield.mk)
