@@ -105,3 +105,4 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_BRIGHTNESS_PATH := /sys/class/backlight/pwm-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_INCLUDE_CRYPTO := true
+TARGET_RECOVERY_DEVICE_MODULES := rm-wrapper
