@@ -105,16 +105,3 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_BRIGHTNESS_PATH := /sys/class/backlight/pwm-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_INCLUDE_CRYPTO := true
-BOARD_USES_DOUBLEFLIP_FB := true
-
-# MultiROM
-TARGET_RECOVERY_IS_MULTIROM := true
-MR_INPUT_TYPE := type_b
-MR_INIT_DEVICES := device/nvidia/shieldtablet/multirom/mr_init_devices.c
-MR_DPI := xhdpi
-MR_DPI_FONT := 323
-MR_FSTAB := device/nvidia/shieldtablet/multirom/twrp.fstab
-MR_KEXEC_MEM_MIN := 0x85000000
-MR_DEVICE_HOOKS := device/nvidia/shieldtablet/multirom/mr_hooks.c
-MR_DEVICE_HOOKS_VER := 5
-MR_DEVICE_VARIANTS := shieldtablet
