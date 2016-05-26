@@ -15,5 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_shieldtablet.mk \
-    $(LOCAL_DIR)/cm.mk
+    $(LOCAL_DIR)/omni.mk
