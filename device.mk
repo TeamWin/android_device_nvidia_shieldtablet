@@ -27,7 +27,7 @@ TARGET_TEGRA_TOUCH := raydium
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
-$(call inherit-product, vendor/nvidia/shield/shieldtablet.mk)
+$(call inherit-product-if-exists, vendor/nvidia/shield/shieldtablet.mk)
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.name
 
@@ -113,5 +113,30 @@ PRODUCT_PACKAGES += \
 
 # Radio Interface
 PRODUCT_PACKAGES += rild
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/twrp/twrp.fstab:recovery/root/etc/twrp.fstab \
+    $(LOCAL_PATH)/twrp/librm31080.so:recovery/root/system/lib/librm31080.so \
+    $(LOCAL_PATH)/twrp/ts.default.so:recovery/root/system/lib/hw/ts.default.so \
+    $(LOCAL_PATH)/twrp/para_10_02_00_20.so:recovery/root/system/lib/para_10_02_00_20.so \
+    $(LOCAL_PATH)/twrp/para_10_02_00_a0.so:recovery/root/system/lib/para_10_02_00_a0.so \
+    $(LOCAL_PATH)/twrp/para_10_02_00_b0.so:recovery/root/system/lib/para_10_02_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_03_00_20.so:recovery/root/system/lib/para_10_03_00_20.so \
+    $(LOCAL_PATH)/twrp/para_10_03_00_a0.so:recovery/root/system/lib/para_10_03_00_a0.so \
+    $(LOCAL_PATH)/twrp/para_10_03_00_a0.so:recovery/root/system/lib/para_10_03_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_04_00_b0.so:recovery/root/system/lib/para_10_04_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_04_00_c0.so:recovery/root/system/lib/para_10_04_00_c0.so \
+    $(LOCAL_PATH)/twrp/para_10_05_00_c0.so:recovery/root/system/lib/para_10_05_00_c0.so \
+    $(LOCAL_PATH)/twrp/para_10_06_00_b0.so:recovery/root/system/lib/para_10_06_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_07_00_b0.so:recovery/root/system/lib/para_10_07_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_08_00_20.so:recovery/root/system/lib/para_10_08_00_20.so \
+    $(LOCAL_PATH)/twrp/para_10_08_00_a0.so:recovery/root/system/lib/para_10_08_00_a0.so \
+    $(LOCAL_PATH)/twrp/para_10_08_00_b0.so:recovery/root/system/lib/para_10_08_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_09_00_c0.so:recovery/root/system/lib/para_10_09_00_c0.so \
+    $(LOCAL_PATH)/twrp/para_10_09_01_c0.so:recovery/root/system/lib/para_10_09_01_c0.so \
+    $(LOCAL_PATH)/twrp/para_10_09_02_c0.so:recovery/root/system/lib/para_10_09_02_c0.so \
+    $(LOCAL_PATH)/twrp/para_10_0a_00_b0.so:recovery/root/system/lib/para_10_0a_00_b0.so \
+    $(LOCAL_PATH)/twrp/para_10_0b_00_a0.so:recovery/root/system/lib/para_10_0b_00_a0.so
 
 $(call inherit-product, device/nvidia/shield-common/shield.mk)

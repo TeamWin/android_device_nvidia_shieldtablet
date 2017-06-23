@@ -93,3 +93,14 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_tn8
 TARGET_LIBINIT_DEFINES_FILE := device/nvidia/shieldtablet/init/init_tn8.cpp
 
+# TWRP
+TW_THEME := portrait_hdpi
+TW_THEME_LANDSCAPE := landscape_hdpi
+BOARD_HAS_FLIPPED_SCREEN := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_BRIGHTNESS_PATH := /sys/class/backlight/pwm-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+TW_INCLUDE_CRYPTO := true
+TARGET_RECOVERY_DEVICE_MODULES := rm-wrapper
